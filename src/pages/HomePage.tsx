@@ -25,6 +25,9 @@ const QUICK_CATS = [
 ];
 
 export default function HomePage() {
+  const commit = import.meta.env.VITE_COMMIT_SHA || "local";
+  const branch = import.meta.env.VITE_BRANCH || "local";
+
   const mapsQuery = encodeURIComponent(`${ADDRESS_LINE_1}, ${ADDRESS_LINE_2}`);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 
@@ -90,6 +93,9 @@ export default function HomePage() {
                 className="h-72 w-full object-cover md:h-96"
               />
             </div>
+            <div style={{ fontSize: 12, opacity: 0.7, marginTop: 24 }}>
+                build: {branch} / {commit}
+           </div>
           </div>
         </div>
       </section>
@@ -265,5 +271,7 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+
+
   );
 }

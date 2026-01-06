@@ -109,7 +109,6 @@ export default function AboutPage() {
 
               <span className="font-semibold text-white/95">Delivery</span>
               
-              me="inline-flex items-center justify-center rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-dark"
               
                 Order on DoorDash
               </a>
