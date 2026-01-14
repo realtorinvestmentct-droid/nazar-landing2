@@ -2,6 +2,10 @@ import React from "react";
 import { MENU_CATEGORIES } from "../data/menuData";
 import type { MenuCategory, MenuItem, MenuTag } from "../data/menuData";
 import { CLOVER_PICKUP_URL, DOORDASH_URL } from "../data/menu";
+import { LanguageProvider, useLang } from "../components/Language";
+import { t } from "../components/i18n";
+
+<p className="mt-2 text-sm text-gray-600">{t("menu.note", LanguageProvider)}</p>
 
 const FILTERS: MenuTag[] = ["Vegetarian", "Spicy", "Best Seller", "New"];
 
@@ -200,6 +204,7 @@ function DetailsModal({
 }
 
 export default function MenuPage() {
+  const { lang } = useLang();
   const [activeCatId, setActiveCatId] = React.useState<string>(MENU_CATEGORIES[0]?.id ?? "");
   const [search, setSearch] = React.useState("");
   const [activeFilters, setActiveFilters] = React.useState<Set<MenuTag>>(new Set());

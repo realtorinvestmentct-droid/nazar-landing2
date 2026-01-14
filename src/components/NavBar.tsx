@@ -1,4 +1,8 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLang } from "./Language";
+import { t } from "./i18n";
 
 const linkBase =
   "relative text-sm font-semibold px-3 py-2 rounded-lg transition-colors duration-200 text-brand-ink hover:bg-brand-primarySoft";
@@ -15,8 +19,9 @@ function linkClass(isActive: boolean) {
 }
 
 export default function NavBar() {
+    const { lang, dir } = useLang();
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-border bg-brand-bg/90 backdrop-blur">
+    <header dir={dir} className="sticky top-0 z-50 border-b border-brand-border bg-brand-bg/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <NavLink to="/" className="flex items-center gap-3">
           <div className="grid h-9 w-9 place-items-center rounded-xl bg-brand-primary text-white font-bold shadow-sm hover:bg-brand-primaryHover transition-colors">
@@ -32,41 +37,35 @@ export default function NavBar() {
             </div>
           </div>
         </NavLink>
+<div className="flex items-center gap-3">
+  <nav className="flex flex-wrap items-center gap-1">
+    <NavLink to="/" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.home", lang)}
+    </NavLink>
 
-        <nav className="flex flex-wrap items-center gap-1">
-          <NavLink to="/" className={({ isActive }) => linkClass(isActive)} end>
-            Home
-          </NavLink>
+    <NavLink to="/menu" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.menu", lang)}
+    </NavLink>
 
-          <NavLink to="/menu" className={({ isActive }) => linkClass(isActive)}>
-            Menu
-          </NavLink>
+    <NavLink to="/gallery" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.gallery", lang)}
+    </NavLink>
 
-          <NavLink
-            to="/gallery"
-            className={({ isActive }) => linkClass(isActive)}
-          >
-            Gallery
-          </NavLink>
+    <NavLink to="/reviews" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.reviews", lang)}
+    </NavLink>
 
-          <NavLink
-            to="/reviews"
-            className={({ isActive }) => linkClass(isActive)}
-          >
-            Reviews
-          </NavLink>
+    <NavLink to="/about" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.about", lang)}
+    </NavLink>
 
-          <NavLink to="/about" className={({ isActive }) => linkClass(isActive)}>
-            About
-          </NavLink>
+    <NavLink to="/contact" className={({ isActive }) => linkClass(isActive)}>
+      {t("nav.contact", lang)}
+    </NavLink>
+  </nav>
 
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => linkClass(isActive)}
-          >
-            Contact
-          </NavLink>
-        </nav>
+  <LanguageSwitcher />
+</div>
       </div>
     </header>
   );
