@@ -6,25 +6,18 @@ export const TAGLINE = "Fresh Turkish flavors—fast, filling, and made with car
 
 // Ordering links (customer-facing)
 export const DOORDASH_URL =
-  "https://www.doordash.com/store/nazar-restaurant-&-bakery-west-haven-34962973/73317566/?event_type=autocomplete&pickup=false";
+  "https://www.doordash.com/store/nazar-restaurant-&-bakery-west-haven-34962973/92198546/?cursor=eyJzdG9yZV9wcmltYXJ5X3ZlcnRpY2FsX2lkcyI6WzEsMTEwMDQ1LDQsMTAwMzMzXSwiY2Fyb3VzZWxfaWQiOiJyZWNlbnRseV92aWV3ZWQiLCJjYXJvdXNlbF90aXRsZSI6IlJlY2VudGx5IHZpZXdlZCJ9&pickup=false";
 
-export const CLOVER_PICKUP_URL = "https://nazar-bakery-west-haven.cloveronline.com";
+export const CLOVER_PICKUP_URL =
+  "https://nazar-bakery-west-haven.cloveronline.com/";
 
-// If you don’t have the public customer links yet, keep these placeholders for now:
-export const GRUBHUB_URL = "https://restaurant.grubhub.com/orders";
-export const UBEREATS_URL = "https://www.ubereats.com/";
 
-// Optional aliases (if older code imports different names)
-export const UBER_EATS_URL = UBEREATS_URL;
+// Uber Eats public customer link (kısa ve temiz)
+export const UBER_EATS_URL =
+  "https://www.ubereats.com/store/nazar-restaurant-%26-bakery-west-haven/miDkOS7wSnGYWrbqFRJAEg";
 
-// Logo paths (served from /public)
-export const DOORDASH_LOGO = "/images/brands/doordash.png";
-export const CLOVER_LOGO = "/images/brands/clover.png";
-export const GRUBHUB_LOGO = "/images/brands/grubhub.png";
-
-// If your file is named "uber-eats.png" (with hyphen), this matches that:
-export const UBER_EATS_LOGO = "/images/brands/uber-eats.png";
-export const UBEREATS_LOGO = UBER_EATS_LOGO;
+export const GRUBHUB_URL =
+  "https://www.grubhub.com/restaurant/nazar-bakery--fast-food-39-elm-st-west-haven/12070448";
 
 export const WEEKLY_SPECIALS_LOGO = "/images/brands/weekly-specials.png";
 export const BREAKFAST_IMG = "/images/brands/breakfast.png";

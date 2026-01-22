@@ -8,12 +8,12 @@ import {
 } from "../data/menu";
 
 // Images (make sure these filenames match your folder exactly)
-import donerImg from "../assets/about/doner.jpg";
-import breadOvenImg from "../assets/about/bread-oven.jpg";
-import pideImg from "../assets/about/pide.jpg";
-import simitPogacaImg from "../assets/about/simit-pogaca.jpg";
-import lahmacunImg from "../assets/about/lahmacun.jpg";
-import ayranImg from "../assets/about/ayran.jpg";
+const donerImg = "/images/about/doner.jpg";
+const simitPogacaImg = "/images/about/simit-pogaca.jpg";
+const lahmacunImg = "/images/about/lahmacun.jpg";
+const breadOvenImg = "/images/about/bread-oven.jpg";
+const pideImg = "/images/about/pide.jpg";
+const ayranImg = "/images/about/ayran.jpg";
 
 type StoryBlock = {
   title: string;
@@ -31,6 +31,7 @@ const blocks: StoryBlock[] = [
     body:
       "Döner is one of Turkey’s most iconic street foods—seasoned meat layered and cooked slowly until the outside turns beautifully caramelized. We slice it thin, serve it hot, and pair it with fresh salad and house sauces for a comforting, satisfying bite.",
     image: donerImg,
+
     alt: "Döner kebab on the rotisserie",
   },
   {
@@ -99,19 +100,6 @@ export default function AboutPage() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
-              href={DOORDASH_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#FF3008] px-5 py-3 text-base font-bold text-white shadow-sm hover:opacity-95"
-              >
-              <span className="font-extrabold text-[#FF3008]">DoorDash</span>
-
-              <span className="font-semibold text-white/95">Delivery</span>
-              
-              
-                Order on DoorDash
-              </a>
               <a
                 href={`tel:${PHONE_NUMBER_TEL}`}
                 className="inline-flex items-center justify-center rounded-xl border border-brand-border bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-brand-bg"

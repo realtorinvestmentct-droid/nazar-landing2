@@ -1,6 +1,5 @@
 // src/pages/GalleryPage.tsx
 import { Link } from "react-router-dom";
-import { DOORDASH_URL } from "../data/menu";
 
 type GalleryItem = {
   title: string;
@@ -101,14 +100,6 @@ export default function GalleryPage() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={DOORDASH_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
-            >
-              Order on DoorDash
-            </a>
 
             <Link
               to="/menu"

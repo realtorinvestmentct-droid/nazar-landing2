@@ -55,32 +55,33 @@ export default function ReviewsPage() {
             </span>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={GOOGLE_REVIEWS_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
-            >
-              Read Google Reviews
-            </a>
+<div className="mt-6 flex flex-wrap gap-3">
+  <a
+    href={GOOGLE_REVIEWS_URL}
+    target="_blank"
+    rel="noreferrer"
+    className="rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-900"
+  >
+    Read Google Reviews
+  </a>
 
-            <a
-              href={GOOGLE_REVIEWS_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-brand-bg"
-            >
-              Write a Review
-            </a>
+  <a
+    href={GOOGLE_REVIEWS_URL}
+    target="_blank"
+    rel="noreferrer"
+    className="rounded-xl border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+  >
+    Write a Review
+  </a>
 
-            <Link
-              to="/contact"
-              className="rounded-xl border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-brand-bg"
-            >
-              Contact us
-            </Link>
-          </div>
+  <Link
+    to="/contact"
+    className="rounded-xl border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+  >
+    Contact us
+  </Link>
+</div>
+
         </div>
       </section>
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { useLang } from "./Language";
 import type { Lang } from "./i18n";
 import { LANG_LABEL } from "./i18n";
